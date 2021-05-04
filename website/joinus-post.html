@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/description.css" rel="stylesheet" />
+    <link href="slick/slick.css" rel="stylesheet" />
+    <link href="slick/slick-theme.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <title>Auburn University At Montgomery - Teaching Assistant Application</title>
+  </head>
+  <body>
+<div class="header-container">
+    <div class="header">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Auburn University" />
+      </a>
+      <div class="right-section">
+        <div class="top-section">
+          <a href="index.html">
+            <img src="images/icons/home.png" alt="Home" class="icon" />
+            <div class="link">Home</div>
+          </a>
+          <a href="#">
+            <img src="images/icons/contact.png" alt="Home" class="icon" />
+            <div class="link">Call Today: (334) 244-3000</div>
+          </a>
+        </div>
+        <div class="clear"></div>
+
+        <div class="bottom-section">
+          <div class="menu-items">
+            <ul>
+              <li><a href="cs.html">Computer Science</a></li>
+              <li><a href="gpa.html">GPA Calculator</a></li>
+              <li><a href="joinus.html">Join Us</a></li>
+              <li><a href="students.html">Students</a></li>
+              <li><a href="alumni.html">Alumni</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="banner-container">
+    <div class="banner-section">
+      <div class="banners">
+        <div style="background: url('images/joinus/banner-1.jpg');"><h4>Earn while you Earn</h4></div>
+      </div>
+      <div class="box banner-box-top-news">
+        <div class="box-container">
+          <h2 class="box-header">Teaching Assistant  <span class="highlight">Required</span> </h2>
+        <p>A Teaching Assistant, or Teacher Assistant, is responsible for helping Teachers complete daily tasks within a classroom environment. </p><p> Their duties include leading lessons or small group activities for students, grading student assignments in accordance with the Teachers grading criteria and providing individual guidance to students with learning disabilities or behavioral challenges.
+
+</p>
+      
+      </div>
+      </div>
+    </div>
+    
+</div>
+    <div class="clear"></div>
+   <div class="content">
+     <div class="content-col1">
+      
+       <div class="box  description-content">
+          <div class="box-container">
+                          <h2 class="box-header">Teaching Assistant <span class="highlight"> Application - Submitted</span></h2>
+                          
+<div class="clear"></div>
+<div class="success-box">Your request has been submitted. We will get back to you soon.</div>
+<div class="result"></div>
+          </div>
+       </div>
+      
+       
+     </div>
+     <div class="content-col2">
+      
+       <div class="box content-box" style="width:380px">
+          <div class="box-container">
+            <h2 class="box-header" style="margin-bottom:10px;">Contact for <span class="highlight"> Information</span></h2>
+            <p>
+              <strong>Lei (Lee) Wu.</strong><br/>
+              Department of Computer Science & Computer Information Systems (CSCI)<br/>
+              College of Science (CoS),<br/> Auburn University at Montgomery (AUM)<br/>
+              Office: <strong>Goodwyn Hall 310-Q</strong><br/>
+              E-Mail: <strong>lwu@aum.edu</strong><br/>
+            </p>
+          </div>
+       </div>
+        <div class="box content-box" style="width:380px">
+          <div class="box-container">
+            <h2 class="box-header" style="margin-bottom:10px;">Student <span class="highlight"> Testimonial</span></h2>
+                   <iframe width="360" height="180" src="https://www.youtube.com/embed/aR73rz7a5ss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+       </div>
+     </div>
+   </div>
+    <div class="clear"></div>
+    <div class="footer">
+      <p>&#xa9 2021 All rights reserved. Merlin Margret Oguri</p>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="slick/slick.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    var query = window.location.search.replace("?", "");
+    if ( query == "" ) return;
+    var fields = query.split("&");
+        if ( fields.length == 0 ) {
+           $(".result").html('<p>No data was submitted.</p>');
+        }
+        var res='<table width="100%">';
+            var field_parts;
+            for ( var i in fields ) {
+                field_parts = fields[i].split("=");
+                field_parts[0] = decode( field_parts[0].toUpperCase() );
+                field_parts[1] = decode( field_parts[1] );
+                res+="<tr><th align='left'>" + field_parts[0] + "</th>";
+                res+="<td>" + field_parts[1] + "</td></tr>";
+            }
+            res+="</table>"
+            $(".result").html(res);
+  });
+    function decode ( text ) {
+    text = text.replace(/\+/g, " ");
+    text = text.replace(/%[a-fA-F0-9]{2}/g, 
+        function ( text ) {
+            return String.fromCharCode( "0x" + text.substr(1,2));
+        }
+    );
+    return text;
+  }
+    
+   
+  </script>
+</html>

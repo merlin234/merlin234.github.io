@@ -1,0 +1,29 @@
+.description-content {
+  width: 1024px;
+  margin-bottom: 20px;
+}
+.sub-header {
+  margin: 20px 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.description-content img {
+  width: 500px !important;
+  float: right;
+  margin: 15px;
+  object-fit: cover;
+  border-start-end-radius: 15px;
+  border-end-start-radius: 15px;
+}
+.description-content ul {
+  font-size: 16px;
+}
+.data-table {
+  margin-bottom: 20px;
+}
+.data-table tr,
+td,
+th {
+  border: 1px black solid;
+  padding: 5px;
+}

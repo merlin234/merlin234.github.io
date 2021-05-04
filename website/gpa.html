@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/description.css" rel="stylesheet" />
+    <link href="slick/slick.css" rel="stylesheet" />
+    <link href="slick/slick-theme.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <title>Auburn University At Montgomery - GPA Calculator</title>
+  </head>
+  <body>
+<div class="header-container">
+    <div class="header">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Auburn University" />
+      </a>
+      <div class="right-section">
+        <div class="top-section">
+          <a href="index.html">
+            <img src="images/icons/home.png" alt="Home" class="icon" />
+            <div class="link">Home</div>
+          </a>
+          <a href="#">
+            <img src="images/icons/contact.png" alt="Home" class="icon" />
+            <div class="link">Call Today: (334) 244-3000</div>
+          </a>
+        </div>
+        <div class="clear"></div>
+
+        <div class="bottom-section">
+          <div class="menu-items">
+            <ul>
+              <li><a href="cs.html">Computer Science</a></li>
+              <li><a href="gpa.html"  class="active">GPA Calculator</a></li>
+              <li><a href="joinus.html">Join Us</a></li>
+              <li><a href="students.html">Students</a></li>
+              <li><a href="alumni.html">Alumni</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="banner-container">
+    <div class="banner-section">
+      <div class="banners">
+        <div style="background: url('images/gpa/Banner.jpg');"><h4>Raise the bar | Be Excellent</h4></div>
+      </div>
+      <div class="box banner-box-top-news">
+        <div class="box-container">
+          <h2 class="box-header">What is <span class="highlight">GPA</span> </h2>
+        <p>Your GPA, or Grade Point Average, is a number that indicates how well or how high you scored in your courses on average. It’s meant to score you (usually on a GPA scale between 1.0 and 4.0) during your studies and shows whether your overall grades have been high or low. </p><p>This number is then used to assess whether you meet the standards and expectations set by the degree programme or university.
+
+</p>
+      
+      </div>
+      </div>
+    </div>
+    
+</div>
+    <div class="clear"></div>
+   <div class="content">
+     <div class="content-col1">
+      
+       <div class="box  description-content">
+          <div class="box-container">
+                          <h2 class="box-header">GPA <span class="highlight"> Calculator</span></h2>
+                         <p>Enter credit hours and letter grade for atleast two courses to calculate your GPA</p>
+<div class="clear"></div>
+<form method="GET" action="joinus-post.html" id="frmgpa">
+ <table width="100%" class="data-table">
+        <thead>
+          <tr><th colspan="3" align="right"> <button type="button" id="addcourse">Add Course</button></th></tr>
+         <tr><th>Course</th><th>Credit Hours</th><th>Grade Letter</th></tr>
+        </thead>
+        <tbody id="controls">
+          <tr>
+            <th align="left"><input type="text" id="course0" name="course[]"></th>
+            <td><input type="text" id="credithours0" name="credithours[]" required/></td>
+            <td><select id="grade0" name="grade[]" required>
+              <option value="">Select</option>
+              <option value="1">A</option>
+              <option value="2">B</option>
+              <option value="3">C</option>
+              <option value="4">D</option>
+            </select></td>
+          </tr>
+          <tr>
+            <th align="left"><input type="text" id="course1" name="course[]"></th>
+            <td><input type="text" id="credithours1" name="credithours[]" required/></td>
+            <td><select id="grade1" name="grade[]" required>
+              <option value="">Select</option>
+              <option value="4">A</option>
+              <option value="3">B</option>
+              <option value="2">C</option>
+              <option value="1">D</option>
+            </select></td>
+          </tr>
+          
+       
+        </tbody>
+        <tfoot>
+             <tr>
+            <td colspan="2" align="left"><button type="button" id="calculate">Calculate GPA</button>
+              <td><input type="text" id="calculatedgpa" name="calculatedgpa" readonly/>
+            </td>
+         
+          </tr>
+        </tfoot>
+      </table>
+      
+       
+</form>
+     
+          </div>
+       </div>
+      
+       
+     </div>
+     <div class="content-col2">
+  
+        <div class="box content-box" style="width:380px">
+          <div class="box-container">
+            <h2 class="box-header" style="margin-bottom:10px;">Student <span class="highlight"> Testimonial</span></h2>
+                   <iframe width="360" height="180" src="https://www.youtube.com/embed/aR73rz7a5ss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+       </div>
+     </div>
+   </div>
+    <div class="clear"></div>
+    <div class="footer">
+      <p>&#xa9 2021 All rights reserved. Merlin Margret Oguri</p>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="slick/slick.js"></script>
+  <script type="text/javascript">
+    var n=1; //0 and 1 there are two fields already available;
+    $(document).ready(function () {
+      $(".banners").slick({
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        variableWidth: true,
+      });
+      $("#addcourse").click(function(){
+        n=n+1;
+        var newcontrol=`<tr>
+            <th align="left"><input type="text" id="course`+n+`" name="course[]"></th>
+            <td><input type="text" id="credithours`+n+`" name="credithours[]" required/></td>
+            <td><select id="grade`+n+`" name="grade[]" required>
+              <option value="">Select</option>
+              <option value="4">A</option>
+              <option value="3">B</option>
+              <option value="2">C</option>
+              <option value="1">D</option>
+            </select></td>
+          </tr>`;
+          $("#controls").append(newcontrol);
+      });
+      $("#calculate").click(function(){
+        var TotalCreditHours=0;
+        var TotalNumericGrade=0;
+        for(i=0;i<=n;i++){
+          if(!validateControls($("#course"+i), $("#credithours"+i), $("#grade"+i))){
+            break;
+          }
+          //Calculating GPA
+          TotalCreditHours+=parseInt($("#credithours"+i).val());
+          TotalNumericGrade+=parseInt($("#grade"+i).val());
+       }
+       console.log(TotalCreditHours, TotalNumericGrade);
+       var Grade = (TotalCreditHours* TotalNumericGrade)/ TotalCreditHours;
+       $("#calculatedgpa").val(Grade);
+      })
+    });
+    function validateControls(coursename, credithours, grade){
+     if(coursename.val()==""){
+       alert('Course name cannot be empty');
+       coursename.focus();
+       return false;
+     } 
+     if(credithours.val()=="" || isNaN(credithours.val())){
+       alert("Credit hours is required and should be a number");
+       credithours.focus();
+       return false;
+     }
+     if(grade.val()==""){
+       alert('Grade is required');
+       grade.focus();
+       return false;
+     }
+     return true;
+    }
+  </script>
+</html>
